@@ -21,11 +21,7 @@ export default function Scanner() {
     function permissionsValidate() {
         setTextLoadingProgress('Verificando permissão');
         setLoading(true);
-        request(
-            Platform.OS === 'ios'
-                ? PERMISSIONS.IOS.CAMERA
-                : PERMISSIONS.ANDROID.CAMERA
-        ).then((result) => {
+        request(Platform.OS === 'ios' ? PERMISSIONS.IOS.CAMERA : PERMISSIONS.ANDROID.CAMERA).then((result) => {
             setPermissionResult(result);
             if (result === 'blocked' || result === 'denied') {
                 console.log(result);
@@ -45,8 +41,7 @@ export default function Scanner() {
                 onPress={() => permissionsValidate()}
             >
                 <View style={styles.textItem}>
-                    <Title text={'item.nome'} />
-
+                    <Title text={'Botão'} />
                 </View>
             </TouchableOpacity>
         </View>
