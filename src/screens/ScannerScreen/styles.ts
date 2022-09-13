@@ -1,5 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../utils/theme';
+const { width, height } = Dimensions.get('window')
 
 
 export default StyleSheet.create({
@@ -8,9 +9,23 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    containerBody: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    containerFooter: {
+        height: 100,
+        width: width,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.success,
+        
+    },
     containerButton: {
         padding: 20,
-        backgroundColor: colors.gray,
+        width: width/3,
+        backgroundColor: colors.warn,
         alignItems: 'center',
         paddingVertical: 12,
     },
