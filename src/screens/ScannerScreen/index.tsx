@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Platform, TouchableOpacity, View } from 'react-native';
 import { request, PERMISSIONS } from 'react-native-permissions';
+import QrCodeIconScanner from '../../assets/svg/qrCodeIconScanner.svg'
 
 import { Title } from '../../components/Title';
 import { colors } from '../../utils/theme';

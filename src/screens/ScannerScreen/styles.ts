@@ -8,6 +8,7 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: colors.progres,
     },
     containerBody: {
         flex: 1,
@@ -24,7 +25,7 @@ export default StyleSheet.create({
     },
     containerButton: {
         padding: 20,
-        width: width/3,
+        width: width/2,
         backgroundColor: colors.warn,
         alignItems: 'center',
         paddingVertical: 12,
