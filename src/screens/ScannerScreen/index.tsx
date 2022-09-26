@@ -4,6 +4,7 @@ import { request, PERMISSIONS } from 'react-native-permissions';
 import QrCodeIconScanner from '../../assets/svg/qrCodeIconScanner.svg'
 
 import { Title } from '../../components/Title';
+import AppScanActivityModule from '../../utils/AppScanActivityModule';
 import { colors } from '../../utils/theme';
 import styles from './styles';
 
@@ -40,6 +41,7 @@ export default function ScannerScreen() {
     }
 
     function handleAction() {
+        AppScanActivityModule.startScan();
         console.log('Action.');
     }
 
