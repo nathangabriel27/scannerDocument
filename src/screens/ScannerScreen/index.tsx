@@ -4,7 +4,7 @@ import { request, PERMISSIONS } from 'react-native-permissions';
 import QrCodeIconScanner from '../../assets/svg/qrCodeIconScanner.svg'
 
 import { Title } from '../../components/Title';
-import AppScanActivityModule from '../../utils/AppScanActivityModule';
+import AppScanActivityModule from '../../modules/AppScanActivityModule';
 import { colors } from '../../utils/theme';
 import styles from './styles';
 
@@ -40,9 +40,14 @@ export default function ScannerScreen() {
         });
     }
 
-    function handleAction() {
-        AppScanActivityModule.startScan();
-        console.log('Action.');
+    async function handleAction() {
+        try {
+            const imagePath = await AppScanActivityModule.startScan();
+            console.log('Image Path', imagePath);
+        } catch (e) {
+            console.log(e)
+        }
+        
     }
 
 
